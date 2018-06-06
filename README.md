@@ -20,7 +20,7 @@ $return_url = '如上文中第一步的例子 https://www.jimoe.cn/oAuth.php';
 3. 去微博开放平台内的**基本信息->高级信息**,把授权回调页那俩给设置成`oAuth.php`所在的文件路径后加上`?return`,即`oAuth.php?return`，以第一步举的例子**为例**，完整的路径就应该是`https://www.jimoe.cn/oAuth.php?return`
 4. 访问你的`oAuth.php?login`，以第一步的例子**为例**，链接就应该是`https://www.jimoe.cn/oAuth.php?login`，点击进去之后里面有个蓝链，点进去输入自己微博的账号密码(这个页面即为微博的oAuth)，然后登录完之后微博的oAuth会返回一段json串，大概是这样的
 ```json
-{"access_token":"手动马赛克","remind_in":"XXXX","expires_in":XXXXX,"uid":"XXXXXX","isRealName":"true"}
+{"access_token":"手动马赛克","remind_in":"XXXX","expires_in":"XXXXX","uid":"XXXXXX","isRealName":"true"}
 ```
 "手动马赛克"的那个部分(`access_token`)即为我们所需要的参数,这个参数同样也要**妥善保存**，不要告诉其他人。此处的`oAuth.php`不要删除，微博的access_token是有过期时间的，没过审核的话保鲜期为一天(测试用)，过审核的话保鲜期为30天。
 5. 将从Github下载下来的文件夹改名为`WeiboSync`(同"使用**说明**-1")，放入Typecho的plugins文件夹内，同时你可以选择性的把`oAuth.php`这个文件删掉(如果你在"使用**步骤**-1"时将这个文件转移到了其他的地方)
