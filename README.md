@@ -1,5 +1,5 @@
 # Typecho-Plugin-WeiboSync
-当发布或更新文章时,能够将文章的标题和链接同步至你的微博
+当发布文章时,能够将文章的标题和链接同步至你的微博
 ![演示效果](https://i.loli.net/2018/06/06/5b17ea49aae24.png)
 ### 使用说明
 1. 下载之后，请把文件夹重新命名为`WeiboSync`后再启用插件，否则可能会出问题
@@ -23,7 +23,7 @@ $return_url = '如上文中第一步的例子 https://www.jimoe.cn/oAuth.php?ret
 {"access_token":"手动马赛克","remind_in":"XXXX","expires_in":"XXXXX","uid":"XXXXXX","isRealName":"true"}
 ```
 5. 将从Github下载下来的文件夹改名为`WeiboSync`(同"使用**说明**-1")，放入Typecho的plugins文件夹内，同时你可以选择性的把`oAuth.php`这个文件删掉(如果你在"使用**步骤**-1"时将这个文件转移到了其他的地方)
-6. 进入后台启用插件，填写好`Access_Key`(**即access_token**)，并自定义设置选项"微博大括号内内容"，两者**均为必填选项**，否则提交文章时会白屏(同"使用**说明**-4")
+6. 进入后台启用插件，填写好`Access_Key`(**即access_token**)，并自定义设置选项"微博大括号内内容"，两者**均为必填选项**，否则提交文章时可能会白屏(同"使用**说明**-4")
 7. 记得定时更新你的`Access_Key`(**即access_token**)，保鲜期一旦过了，插件本体就失去了对你微博账户的控制权，请使用`oAuth.php`重新生成新的access_token
 ### 常见BUG
 1. 返回的值和这里介绍的不一致&PHP报错
